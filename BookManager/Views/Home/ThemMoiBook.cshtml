@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "ThemMoiBook";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<BookManager.Models.Book>
+
+<main>
+    <div class=" " style=" margin: 150px 0px ">
+        <h4>Thêm mới Book </h4>
+        <form>
+            <div class="form-group">
+                <label for="bookID">BookID:</label>
+                <input type="number" class="form-control" name="BookID">
+            </div>
+            <div class="form-group">
+                <label for="bookName">BookName:</label>
+                <input type="text" class="form-control" name="BookName">
+            </div>
+            <div class="form-group">
+                <label for="ngayxuatban">NgayXuatBan:</label>
+                <input type="date" class="form-control" name="NgayXuatBan">
+            </div>
+            <div class="form-group">
+                <label for="author">Author:</label>
+                <input type="text" class="form-control" name="Author">
+            </div>
+            <button type="submit" class="btn btn-default">Save</button>
+        </form>
+    </div>
+</main>
+
+

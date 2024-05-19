@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "HienThiBook";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<BookManager.Models.Book>
+<main>
+    <div class="page-section features " style=" margin: 150px 0px ">
+        <div class=" container"></div>
+        <h4>Hiển thị Book </h4>
+        <p>
+            <a href="~/Home/ThemMoiBook" style=" float:right">Thêm mới </a>
+        </p>
+
+        @if (Model.Count > 0)
+        {
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên sách</th>
+                    <th>Ngày xuất bản</th>
+                    <th>Tác giả</th>
+                </tr>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.BookID</td>
+                        <td>@book.BookName</td>
+                        <td>@book.NgayXuatBan</td>
+                        <td>@book.Author</td>
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <p>Không có sách nào.</p>
+        }
+
+    </div>
+</main>
+
+
